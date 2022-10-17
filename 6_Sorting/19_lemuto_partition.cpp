@@ -14,8 +14,6 @@ int lemuto_partition(int arr[], int l,int h)
     }
     swap(arr[i+1],pivot);
     return (i+1);
-    
-
 }
 int main()
 {
