@@ -19,6 +19,7 @@ int main()
 {
     int arr[] = {10,80,30,90,40,50,70};
     int n=sizeof(arr)/sizeof(arr[0]);
+    cout<<"Our pivot is at position : ";
     cout<<lemuto_partition(arr,0,n-1)<<endl;
     for(int x : arr)
     {
