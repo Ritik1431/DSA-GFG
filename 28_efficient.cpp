@@ -15,7 +15,7 @@ void segregate_negpos(int arr[], int n)
 }
 int main()
 {
-    int arr[] = {-5,9,10,-14,56};
+    int arr[] = {-15,9,10,-14,56};
     int n = sizeof(arr)/sizeof(arr[0]);
     segregate_negpos(arr,n);
     for (int x : arr)
