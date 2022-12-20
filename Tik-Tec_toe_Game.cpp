@@ -24,7 +24,6 @@ void showInstructions()
 }
 void initialise(char board[][SIDE])
 {
-    // Initially the board to '*' as said
     for (int i = 0; i < SIDE; i++)
     {
         for (int j = 0; j < SIDE; j++)
@@ -164,7 +163,6 @@ int bestMove(char board[][SIDE], int moveIndex)
     }
     return x * 3 + y;
 }
-// A function to play Tic-Tac-Toe
 void playTicTacToe(int whoseTurn)
 {
     char board[SIDE][SIDE];
