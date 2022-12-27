@@ -1,21 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
 const int n = 4;
-void transpose(int mat[n][n])
+void rotate90(int mat[n][n])
 {
-    int temp[n][n];
     for(int i = 0; i < n; i++)
     {
-        for(int j=0; j<n; j++)
+        for(int j=i+1; j<n; j++)
         {
-            temp[i][j] = mat[j][i];
+            swap(mat[i][j],mat[j][i]);
         }
     }
     for(int i = 0; i < n; i++)
     {
-        for(int j=0; j<n; j++)
+        int low = 0 , high = n-1;
+        while(low<high)
         {
-            mat[i][j]=temp[i][j];
+            swap(mat[low][i],mat[high][i]);
+            low++;
+            high--;
         }
     }
     for(int i = 0; i < n; i++)
@@ -34,6 +36,6 @@ int main()
 				   {9, 10, 11, 12},
 				   {13, 14, 15, 16}};
 
-   transpose(arr);
+   rotate90(arr);
     return 0;
 }
