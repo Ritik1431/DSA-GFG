@@ -20,7 +20,22 @@ struct Myhash
     }
     bool search(int key)
     {
-        
+        int h = hash(key);
+        int i = h;
+        while(arr[i]!=-1);
+        {
+            if(arr[i]==key)
+            {
+                return true;
+            }
+            i = (i+1)%cap;
+            if(i==h)
+            {
+                return false;
+            }
+            return false;
+        }
+
     }
 };
 int main()
